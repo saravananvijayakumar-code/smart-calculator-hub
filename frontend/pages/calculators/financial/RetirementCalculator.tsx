@@ -10,6 +10,7 @@ import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useCalculatorHistory } from '../../../hooks/useCalculatorHistory';
 import { useToast } from '@/components/ui/use-toast';
 import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
+import { AdsettraSlot } from '../../../components/ads/AdsettraSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface RetirementResult {
@@ -140,6 +141,7 @@ export default function RetirementCalculator() {
     >
       <div className="max-w-7xl mx-auto space-y-8">
         <AdsterraSlot position="top" className="mb-6" />
+        <AdsettraSlot position="top" className="mb-6" />
 
         <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-950/30 dark:via-blue-950/30 dark:to-indigo-950/30 rounded-2xl p-8 border border-purple-200 dark:border-purple-800 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="flex items-start gap-4 mb-6">
@@ -431,6 +433,7 @@ export default function RetirementCalculator() {
         </Card>
 
         <AdsterraSlot position="middle" className="my-6" />
+        <AdsettraSlot position="middle" className="my-6" />
 
         <div className="grid md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
           <Card className="border-2 border-blue-100 dark:border-blue-900/50 hover:shadow-xl transition-all duration-300">
@@ -481,6 +484,7 @@ export default function RetirementCalculator() {
         </div>
 
         <AdsterraSlot position="middle" className="my-6" />
+        <AdsettraSlot position="middle" className="my-6" />
 
         <Card className="border-2 border-indigo-100 dark:border-indigo-900/50 animate-in fade-in slide-in-from-bottom duration-700 delay-300">
           <CardHeader className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50">
@@ -782,8 +786,10 @@ export default function RetirementCalculator() {
         </Card>
 
         <AdsterraSlot position="bottom" className="mt-6" />
+        <AdsettraSlot position="bottom" className="mt-6" />
 
         <AdsterraSlot position="sidebar" className="mt-6" />
+        <AdsettraSlot position="sidebar" className="mt-6" />
       </div>
     </CalculatorLayout>
   );

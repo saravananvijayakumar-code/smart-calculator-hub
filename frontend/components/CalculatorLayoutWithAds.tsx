@@ -1,6 +1,7 @@
 import { ReactNode } from 'react';
 import { SEOHead } from './SEOHead';
 import { AdsterraSlot } from './ads/AdsterraSlot';
+import { AdsettraSlot } from './ads/AdsettraSlot';
 import EnhancedAIAnalysis from './EnhancedAIAnalysis';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
@@ -35,6 +36,7 @@ function CalculatorLayoutWithAds({
         />
         
         {showAd && <AdsterraSlot position="top" className="mb-6" />}
+        {showAd && <AdsettraSlot position="top" className="mb-6" />}
 
         <div className="max-w-7xl mx-auto">
           <div className="grid grid-cols-1 lg:grid-cols-4 gap-8">
@@ -59,6 +61,7 @@ function CalculatorLayoutWithAds({
               )}
 
               {showAd && <AdsterraSlot position="middle" className="my-8" />}
+              {showAd && <AdsettraSlot position="middle" className="my-8" />}
 
               {tips && tips.length > 0 && (
                 <div className="bg-blue-50 dark:bg-blue-950 p-6 rounded-lg mt-8">
@@ -75,6 +78,7 @@ function CalculatorLayoutWithAds({
               )}
 
               {showAd && <AdsterraSlot position="bottom" className="mt-8" />}
+              {showAd && <AdsettraSlot position="bottom" className="mt-8" />}
             </div>
           </div>
         </div>

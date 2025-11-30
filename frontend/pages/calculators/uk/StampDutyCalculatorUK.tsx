@@ -11,6 +11,7 @@ import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Calculator, Home, Info, TrendingUp, AlertCircle, FileText, DollarSign, Clock, Building, Users, HelpCircle, Shield, Wallet, Target } from 'lucide-react';
 import { CalculatorLayout } from '../../../components/CalculatorLayout';
 import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
+import { AdsettraSlot } from '../../../components/ads/AdsettraSlot';
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { formatCurrency } from '../../../utils/formatting';
@@ -151,6 +152,7 @@ const StampDutyCalculatorUK: React.FC = () => {
         tips={tips}
       >
       <AdsterraSlot position="top" className="mb-6" />
+      <AdsettraSlot position="top" className="mb-6" />
 
       <div className="grid gap-8 md:grid-cols-2">
         <Card>
@@ -270,6 +272,7 @@ const StampDutyCalculatorUK: React.FC = () => {
       </div>
 
       <AdsterraSlot position="middle" className="my-6" />
+      <AdsettraSlot position="middle" className="my-6" />
       
       {analysisRequest && results && (
         <>
@@ -299,6 +302,7 @@ const StampDutyCalculatorUK: React.FC = () => {
       )}
 
       <AdsterraSlot position="middle" className="my-6" />
+      <AdsettraSlot position="middle" className="my-6" />
 
       <Card className="mt-8">
         <CardHeader>
@@ -709,8 +713,10 @@ const StampDutyCalculatorUK: React.FC = () => {
       </Card>
 
       <AdsterraSlot position="bottom" className="mt-6" />
+      <AdsettraSlot position="bottom" className="mt-6" />
 
       <AdsterraSlot position="sidebar" className="mt-6" />
+      <AdsettraSlot position="sidebar" className="mt-6" />
       </CalculatorLayout>
     </>
   );

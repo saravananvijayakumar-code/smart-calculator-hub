@@ -1,21 +1,37 @@
 import { AdsterraSlot } from './AdsterraSlot';
+import { AdsettraSlot } from './AdsettraSlot';
 
 interface BlogAdSlotProps {
   position?: 'top' | 'middle' | 'bottom';
   className?: string;
 }
 
-export function BlogAdSlot({ 
+export function BlogAdSlot({
   position = 'top',
   className = ''
 }: BlogAdSlotProps) {
-  return <AdsterraSlot position={position} className={className} />;
+  return (
+    <div className={`space-y-4 ${className}`}>
+      <AdsterraSlot position={position} />
+      <AdsettraSlot position={position} />
+    </div>
+  );
 }
 
 export function InContentAd() {
-  return <AdsterraSlot position="middle" className="my-8" />;
+  return (
+    <div className="space-y-4">
+      <AdsterraSlot position="middle" className="my-8" />
+      <AdsettraSlot position="middle" className="my-8" />
+    </div>
+  );
 }
 
 export function SidebarBlogAd() {
-  return <AdsterraSlot position="top" className="sticky top-4" />;
+  return (
+    <div className="space-y-4">
+      <AdsterraSlot position="top" className="sticky top-4" />
+      <AdsettraSlot position="top" className="sticky top-4" />
+    </div>
+  );
 }

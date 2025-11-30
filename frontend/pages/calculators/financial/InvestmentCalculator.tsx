@@ -13,6 +13,7 @@ import EnhancedAIAnalysis from '../../../components/EnhancedAIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useFormatting } from '../../../utils/formatting';
 import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
+import { AdsettraSlot } from '../../../components/ads/AdsettraSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface InvestmentResult {
@@ -198,6 +199,7 @@ export function InvestmentCalculator() {
     >
       <div className="max-w-6xl mx-auto space-y-8">
         <AdsterraSlot position="top" className="mb-6" />
+        <AdsettraSlot position="top" className="mb-6" />
 
         {/* Input Form */}
         <Card>
@@ -307,6 +309,7 @@ export function InvestmentCalculator() {
         </Card>
 
         <AdsterraSlot position="middle" className="my-6" />
+        <AdsettraSlot position="middle" className="my-6" />
 
         {/* Results */}
         {result && result.isValid && (
@@ -551,6 +554,7 @@ export function InvestmentCalculator() {
         )}
 
         <AdsterraSlot position="middle" className="my-6" />
+        <AdsettraSlot position="middle" className="my-6" />
 
         {/* Educational Content */}
         <div className="space-y-8">
