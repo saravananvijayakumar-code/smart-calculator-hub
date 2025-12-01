@@ -157,7 +157,12 @@ function calculateTax(income: number, brackets: TaxBracket[]): number {
 }
 
 function calculateTaxBreakdown(income: number, brackets: TaxBracket[]) {
-  const breakdown = [];
+  const breakdown: Array<{
+    range: string;
+    rate: string;
+    income: number;
+    tax: number;
+  }> = [];
   let remainingIncome = income;
   
   for (const bracket of brackets) {

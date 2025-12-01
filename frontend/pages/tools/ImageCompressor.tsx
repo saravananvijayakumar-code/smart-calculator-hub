@@ -13,6 +13,8 @@ import {
 import { AppleStyleCard } from '@/components/AppleStyleCard';
 import { SEOHead } from '@/components/SEOHead';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
+import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
+import { AffiliateBanner } from '@/components/AffiliateBanner';
 import { useImageCompressorStore } from '@/stores/imageCompressorStore';
 import {
   compressImage,

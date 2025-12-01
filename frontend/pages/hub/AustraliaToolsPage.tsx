@@ -17,6 +17,7 @@ import {
   Receipt
 } from 'lucide-react';
 import { SEOHead } from '../../components/SEOHead';
+import { DirectoryInterlinks } from '../../components/DirectoryInterlinks';
 
 import AmazonAffiliate from '../../components/ads/AmazonAffiliate';
 import NativeBanner from '../../components/ads/NativeBanner';

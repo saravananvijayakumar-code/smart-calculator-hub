@@ -1,0 +1,1 @@
+import{j as s}from"./ui-DlaF13aT.js";import{A as o}from"./AdsterraSlot-Ca1tb8CW.js";import{A as t}from"./AdsettraSlot-aPfIn2qq.js";function i({className:i="",position:r="top"}){return s.jsxs("div",{className:`space-y-4 ${i}`,children:[s.jsx(o,{position:r}),s.jsx(t,{position:r})]})}export{i as N};

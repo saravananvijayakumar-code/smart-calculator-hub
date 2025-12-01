@@ -4,6 +4,8 @@ import { Button } from '@/components/ui/button';
 import { Card, CardContent, CardDescription, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEOHead } from '@/components/SEOHead';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
+import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
+import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
 
 interface IPReputationData {
   ip: string;

@@ -1,4 +1,4 @@
-import React, { useState, useRef, useEffect } from 'react';
+import React, { useState, useRef, useEffect, ChangeEvent } from 'react';
 import { Card } from '@/components/ui/card';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription } from '@/components/ui/alert';
@@ -9,6 +9,8 @@ import { compressImage } from '@/lib/imageCompression';
 import { SEOHead } from '@/components/SEOHead';
 import { StructuredData } from '@/components/StructuredData';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
+import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
+import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
 
 interface PlantCareTips {
   wateringFrequency: string;
@@ -69,7 +71,7 @@ export default function PlantFinder() {
     }
   };
 
-  const handleImageUpload = async (e: React.ChangeEvent<HTMLInputElement>) => {
+  const handleImageUpload = async (e: ChangeEvent<HTMLInputElement>) => {
     const file = e.target.files?.[0];
     if (!file) return;
 

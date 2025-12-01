@@ -14,6 +14,7 @@ import ExportShareButtons from '@/components/ExportShareButtons';
 import { SEOHead } from '@/components/SEOHead';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 import { AdsettraSlot } from '@/components/ads/AdsettraSlot';
+import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
 
 interface FriendshipResults {
   totalScore: number;

@@ -1,4 +1,3 @@
-// @ts-nocheck
 import React, { useEffect, Suspense, lazy } from 'react';
 import { BrowserRouter as Router, Routes, Route, Navigate } from 'react-router-dom';
 import { QueryClient, QueryClientProvider } from '@tanstack/react-query';
@@ -20,6 +19,7 @@ import { AnalyticsTracker } from './components/AnalyticsTracker';
 import { setupGlobalMessageHandler } from './utils/messageHandler';
 import { usePageTracking } from './hooks/usePageTracking';
 import Loading from './components/system/Loading';
+import { usePerformanceMonitoring } from './utils/performanceMonitor';
 
 const queryClient = new QueryClient();
 
@@ -28,7 +28,7 @@ import './styles/responsive.css';
 import './styles/pwa.css';
 import './styles/animations.css';
 
-const DISABLE_LAZY = import.meta.env.VITE_DISABLE_LAZY === 'true';
+const DISABLE_LAZY = import.meta.env.VITE_DISABLE_LAZY === 'true' || import.meta.env.DEV;
 
 const HomePage = DISABLE_LAZY ? require('./pages/HomePage').HomePage : lazy(() => import('./pages/HomePage').then(m => ({ default: m.HomePage })));
 const AboutPage = DISABLE_LAZY ? require('./pages/AboutPage').AboutPage : lazy(() => import('./pages/AboutPage').then(m => ({ default: m.AboutPage })));
@@ -161,7 +161,7 @@ const MoodJournal = DISABLE_LAZY ? require('./pages/ai/tools/MoodJournal').defau
 const BabyNameGenerator = DISABLE_LAZY ? require('./pages/ai/tools/BabyNameGenerator').default : lazy(() => import('./pages/ai/tools/BabyNameGenerator'));
 const GiftRecommender = DISABLE_LAZY ? require('./pages/ai/tools/GiftRecommender').default : lazy(() => import('./pages/ai/tools/GiftRecommender'));
 
-const BlogListPage = DISABLE_LAZY ? require('./pages/blog/BlogListPage').BlogListPage : lazy(() => import('./pages/blog/BlogListPage').then(m => ({ default: m.BlogListPage })));
+const BlogListPage = DISABLE_LAZY ? require('./pages/blog/BlogListPage').default : lazy(() => import('./pages/blog/BlogListPage'));
 const BlogPostPage = DISABLE_LAZY ? require('./pages/blog/BlogPostPage').default : lazy(() => import('./pages/blog/BlogPostPage'));
 const BlogListPageV2 = DISABLE_LAZY ? require('./pages/blog/BlogListPageV2').default : lazy(() => import('./pages/blog/BlogListPageV2'));
 const BlogPostPageV2 = DISABLE_LAZY ? require('./pages/blog/BlogPostPageV2').default : lazy(() => import('./pages/blog/BlogPostPageV2'));
@@ -200,6 +200,7 @@ const EventCountdownPage = DISABLE_LAZY ? require('./pages/smarttimer/EventCount
 
 const AppContent = () => {
   usePageTracking();
+  usePerformanceMonitoring();
 
   return (
     <div className="min-h-screen bg-background text-foreground">

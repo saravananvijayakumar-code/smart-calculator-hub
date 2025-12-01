@@ -59,8 +59,8 @@ export function DiscountCalculator() {
     const finalPrice = price - discount;
     const tax = parseFloat(taxRate);
     
-    let taxAmount = undefined;
-    let finalWithTax = undefined;
+    let taxAmount: number | undefined = undefined;
+    let finalWithTax: number | undefined = undefined;
     
     if (tax && tax > 0) {
       taxAmount = (finalPrice * tax) / 100;

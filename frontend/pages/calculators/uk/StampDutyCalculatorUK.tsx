@@ -9,9 +9,10 @@ import { Badge } from '@/components/ui/badge';
 import { Tabs, TabsContent, TabsList, TabsTrigger } from '@/components/ui/tabs';
 import { Alert, AlertDescription } from '@/components/ui/alert';
 import { Calculator, Home, Info, TrendingUp, AlertCircle, FileText, DollarSign, Clock, Building, Users, HelpCircle, Shield, Wallet, Target } from 'lucide-react';
-import { CalculatorLayout } from '../../../components/CalculatorLayout';
+import { CalculatorLayoutWithAds } from '../../../components/CalculatorLayoutWithAds';
 import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
 import { AdsettraSlot } from '../../../components/ads/AdsettraSlot';
+import { AutoAdSlot } from '../../../components/ads/AutoAdSlot';
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { formatCurrency } from '../../../utils/formatting';
@@ -145,7 +146,7 @@ const StampDutyCalculatorUK: React.FC = () => {
         description="Calculate UK Stamp Duty Land Tax (SDLT) for 2024 with our comprehensive calculator. Get AI-powered insights, first-time buyer relief calculations, and expert property tax guidance for England and Northern Ireland."
         keywords="UK stamp duty calculator 2024, SDLT calculator, stamp duty land tax, first time buyer relief, property tax UK, additional property surcharge, commercial property tax, AI property analysis"
       />
-      <CalculatorLayout
+      <CalculatorLayoutWithAds
         title="UK Stamp Duty Calculator 2024"
         description="Calculate stamp duty land tax (SDLT) for property purchases in England and Northern Ireland with AI-powered insights"
         keywords="UK stamp duty calculator, SDLT calculator, property tax UK, first time buyer relief"
@@ -715,9 +716,8 @@ const StampDutyCalculatorUK: React.FC = () => {
       <AdsterraSlot position="bottom" className="mt-6" />
       <AdsettraSlot position="bottom" className="mt-6" />
 
-      <AdsterraSlot position="sidebar" className="mt-6" />
-      <AdsettraSlot position="sidebar" className="mt-6" />
-      </CalculatorLayout>
+      <AutoAdSlot position="bottom" className="mt-6" />
+      </CalculatorLayoutWithAds>
     </>
   );
 };

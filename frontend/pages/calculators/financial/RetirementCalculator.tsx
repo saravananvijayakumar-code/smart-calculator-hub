@@ -4,13 +4,14 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Save, TrendingUp, Wallet, Target, DollarSign, Calendar, Sparkles, Award, Shield, Lightbulb, AlertCircle, CheckCircle2, Calculator } from 'lucide-react';
-import { CalculatorLayout } from '../../../components/CalculatorLayout';
+import { CalculatorLayoutWithAds } from '../../../components/CalculatorLayoutWithAds';
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useCalculatorHistory } from '../../../hooks/useCalculatorHistory';
 import { useToast } from '@/components/ui/use-toast';
 import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
 import { AdsettraSlot } from '../../../components/ads/AdsettraSlot';
+import { AutoAdSlot } from '../../../components/ads/AutoAdSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface RetirementResult {
@@ -134,7 +135,7 @@ export default function RetirementCalculator() {
   const goalProgress = parseFloat(retirementGoal) > 0 ? (result.finalAmount / parseFloat(retirementGoal)) * 100 : 0;
 
   return (
-    <CalculatorLayout
+    <CalculatorLayoutWithAds
       title="Retirement Calculator - Plan Your Financial Freedom | 2025"
       description="Free retirement calculator to plan your golden years. Calculate retirement savings, investment growth, and monthly income needed. Expert retirement planning tools for 2025."
       keywords="retirement calculator, retirement planning, pension calculator, 401k calculator, retirement savings calculator, financial freedom calculator, retire early calculator"
@@ -785,12 +786,12 @@ export default function RetirementCalculator() {
           </CardContent>
         </Card>
 
+
         <AdsterraSlot position="bottom" className="mt-6" />
         <AdsettraSlot position="bottom" className="mt-6" />
 
-        <AdsterraSlot position="sidebar" className="mt-6" />
-        <AdsettraSlot position="sidebar" className="mt-6" />
+        <AutoAdSlot position="bottom" className="mt-6" />
       </div>
-    </CalculatorLayout>
+    </CalculatorLayoutWithAds>
   );
 }

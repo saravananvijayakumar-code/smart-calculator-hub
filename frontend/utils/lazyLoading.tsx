@@ -1,4 +1,5 @@
-import { lazy, Suspense, ComponentType } from 'react';
+import React, { lazy, Suspense, createElement } from 'react';
+import type { ComponentType } from 'react';
 import { Card, CardContent } from '@/components/ui/card';
 
 // Loading component for suspense fallback
@@ -34,22 +35,18 @@ export const LoadingCalculator = () => (
 );
 
 // Higher-order component for lazy loading with custom loading component
+// eslint-disable-next-line @typescript-eslint/no-explicit-any
 export function withLazyLoading<T extends object>(
-  componentImport: () => Promise<{ default: ComponentType<T> }>,
+  componentImport: () => Promise<{ default: ComponentType<any> }>,
   fallback: ComponentType = LoadingCalculator
 ) {
   const LazyComponent = lazy(componentImport);
-  
+
   return (props: T) => (
-    <Suspense fallback={<Fallback />}>
+    <Suspense fallback={createElement(fallback)}>
       <LazyComponent {...props} />
     </Suspense>
   );
-  
-  function Fallback() {
-    const FallbackComponent = fallback;
-    return <FallbackComponent />;
-  }
 }
 
 // Preload function for critical calculators

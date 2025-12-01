@@ -48,7 +48,13 @@ const HomeLoanCalculatorIndia: React.FC = () => {
 
     // Calculate year-wise breakdown for first few years
     let remainingPrincipal = loanAmount;
-    let yearlyBreakdown = [];
+    const yearlyBreakdown: Array<{
+      year: number;
+      yearlyInterest: number;
+      yearlyPrincipal: number;
+      taxBenefit: number;
+      remainingBalance: number;
+    }> = [];
     
     for (let year = 1; year <= Math.min(5, tenure); year++) {
       let yearlyInterest = 0;

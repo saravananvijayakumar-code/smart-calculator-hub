@@ -5,6 +5,8 @@ import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { useToast } from '@/components/ui/use-toast';
 import { SEOHead } from '@/components/SEOHead';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
+import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
+import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
 
 interface DeviceInfo {
   browser: string;

@@ -1,6 +1,6 @@
 import React from 'react';
 import { Link } from 'react-router-dom';
-import { Shield, Heart, Car, Calculator, TrendingUp, DollarSign } from 'lucide-react';
+import { Shield, Heart, Car, Calculator, TrendingUp, DollarSign, LucideIcon } from 'lucide-react';
 import { AppleStyleCard } from '../../components/AppleStyleCard';
 import { SEOHead } from '../../components/SEOHead';
 import { DirectoryInterlinks } from '../../components/DirectoryInterlinks';
@@ -9,7 +9,7 @@ interface InsuranceCalculator {
   title: string;
   description: string;
   path: string;
-  icon: React.ComponentType<any>;
+  icon: LucideIcon;
   features: string[];
   category: string;
 }

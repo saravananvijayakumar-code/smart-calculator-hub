@@ -58,7 +58,7 @@ export function PasswordGenerator() {
     let newPassword = '';
     const passwordLength = length[0];
 
-    const requiredChars = [];
+    const requiredChars: string[] = [];
     if (includeLowercase) requiredChars.push(lowercase[Math.floor(Math.random() * lowercase.length)]);
     if (includeUppercase) requiredChars.push(uppercase[Math.floor(Math.random() * uppercase.length)]);
     if (includeNumbers) requiredChars.push(numbers[Math.floor(Math.random() * numbers.length)]);

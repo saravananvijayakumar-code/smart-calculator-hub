@@ -8,6 +8,7 @@ import { Label } from "@/components/ui/label";
 import { SEOHead } from "@/components/SEOHead";
 import { StructuredData } from "@/components/StructuredData";
 import { AdsterraSlot } from "@/components/ads/AdsterraSlot";
+import { AutoAdSlot } from "@/components/ads/AutoAdSlot";
 import { QRCodeSVG } from "qrcode.react";
 
 export default function SmartShortener() {
@@ -91,8 +92,8 @@ export default function SmartShortener() {
         title="Free Smart URL Shortener with Analytics & QR Codes | Smart Calculator Hubs"
         description="Transform long URLs into memorable short links. Free URL shortener with real-time analytics, custom aliases, QR code generation, and click tracking. No signup required!"
         keywords="url shortener, link shortener, short link, qr code, analytics, free url shortener, custom short url, link tracking"
-        ogType="website"
-        ogImage="https://smartcalculatorhubs.com/icons/icon-512x512.png"
+        type="website"
+        image="https://smartcalculatorhubs.com/icons/icon-512x512.png"
       />
       <StructuredData data={structuredData} />
 
@@ -257,7 +258,7 @@ export default function SmartShortener() {
               </div>
             )}
 
-            <AutoAdSlot slot="in-content-1" className="my-8" />
+            <AutoAdSlot placement="in-content-1" className="my-8" />
           </div>
 
           <div className="space-y-6">
@@ -368,7 +369,7 @@ export default function SmartShortener() {
               </CardContent>
             </Card>
 
-            <AutoAdSlot slot="sidebar-1" />
+            <AutoAdSlot placement="sidebar-1" />
           </div>
         </div>
 
@@ -399,7 +400,7 @@ export default function SmartShortener() {
                 </ul>
               </section>
 
-              <AutoAdSlot slot="in-content-2" className="my-8" />
+              <AutoAdSlot placement="in-content-2" className="my-8" />
 
               <section>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
@@ -466,7 +467,7 @@ export default function SmartShortener() {
                 </div>
               </section>
 
-              <AutoAdSlot slot="in-content-3" className="my-8" />
+              <AutoAdSlot placement="in-content-3" className="my-8" />
 
               <section>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4 flex items-center gap-2">
@@ -554,7 +555,7 @@ export default function SmartShortener() {
                 </ul>
               </section>
 
-              <AutoAdSlot slot="in-content-4" className="my-8" />
+              <AutoAdSlot placement="in-content-4" className="my-8" />
 
               <section>
                 <h3 className="text-2xl font-bold text-gray-900 dark:text-gray-100 mb-4">
@@ -609,7 +610,7 @@ export default function SmartShortener() {
           </Card>
         </div>
 
-        <AutoAdSlot slot="bottom-banner" className="mt-12" />
+        <AutoAdSlot placement="bottom-banner" className="mt-12" />
       </div>
     </div>
   );

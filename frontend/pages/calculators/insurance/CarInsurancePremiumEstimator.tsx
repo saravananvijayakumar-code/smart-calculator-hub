@@ -10,12 +10,7 @@ import EnhancedAIAnalysis from "@/components/EnhancedAIAnalysis";
 import ExportShareButtons from "@/components/ExportShareButtons";
 import { AdsterraSlot } from "@/components/ads/AdsterraSlot";
 import { AdsettraSlot } from "@/components/ads/AdsettraSlot";
-
-declare global {
-  interface Window {
-    adsbygoogle: any[];
-  }
-}
+import { AutoAdSlot } from "@/components/ads/AutoAdSlot";
 
 interface InsuranceCalculation {
   comprehensivePremium: number;
