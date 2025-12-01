@@ -282,7 +282,7 @@ export default function PetInsuranceCalculator() {
                 label="ZIP Code"
                 type="text"
                 value={inputs.zipCode}
-                onChange={(e) => setInputs(prev => ({ ...prev, zipCode: e.target.value }))}
+                onChange={(value) => setInputs(prev => ({ ...prev, zipCode: value }))}
                 maxLength={5}
               />
             </div>

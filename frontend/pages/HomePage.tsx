@@ -7,7 +7,6 @@ import { Badge } from '@/components/ui/badge';
 import { Input } from '@/components/ui/input';
 import { SEOHead } from '../components/SEOHead';
 import { AdsterraSlot } from '../components/ads/AdsterraSlot';
-import { AdsettraSlot } from '../components/ads/AdsettraSlot';
 import { CalculatorSearch } from '../components/CalculatorSearch';
 import { useState, useMemo, useEffect, useRef } from 'react';
 import { backgroundPrefetch } from '../utils/backgroundPrefetch';
@@ -354,7 +353,6 @@ export function HomePage() {
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <AdsterraSlot className="flex justify-center" />
-          <AdsettraSlot className="flex justify-center" />
         </div>
       </section>
 
@@ -502,7 +500,6 @@ export function HomePage() {
       <section className="py-8 bg-white">
         <div className="container mx-auto px-4">
           <AdsterraSlot className="flex justify-center" />
-          <AdsettraSlot className="flex justify-center" />
         </div>
       </section>
 

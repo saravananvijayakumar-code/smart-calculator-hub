@@ -5,15 +5,11 @@ interface BlogAdSlotProps {
   className?: string;
 }
 
-export function BlogAdSlot({
+export function BlogAdSlot({ 
   position = 'top',
   className = ''
 }: BlogAdSlotProps) {
-  return (
-    <div className={className}>
-      <AdsterraSlot position={position} />
-    </div>
-  );
+  return <AdsterraSlot position={position} className={className} />;
 }
 
 export function InContentAd() {

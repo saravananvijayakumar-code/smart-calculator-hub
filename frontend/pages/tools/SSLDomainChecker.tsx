@@ -5,8 +5,6 @@ import { Input } from '@/components/ui/input';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 import { SEOHead } from '@/components/SEOHead';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
-import { AutoAdSlot } from '@/components/ads/AutoAdSlot';
-import AmazonAffiliate from '@/components/ads/AmazonAffiliate';
 
 interface SSLResults {
   valid: boolean;

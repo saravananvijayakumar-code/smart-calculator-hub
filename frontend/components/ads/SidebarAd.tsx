@@ -5,11 +5,7 @@ interface SidebarAdProps {
 }
 
 export function SidebarAd({ className = '' }: SidebarAdProps) {
-  return (
-    <div className={className}>
-      <AdsterraSlot position="top" />
-    </div>
-  );
+  return <AdsterraSlot position="top" className={className} />;
 }
 
 export default SidebarAd;

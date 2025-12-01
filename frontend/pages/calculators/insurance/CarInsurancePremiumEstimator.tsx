@@ -9,8 +9,12 @@ import { CalculatorLayoutWithAds } from "../../../components/CalculatorLayoutWit
 import EnhancedAIAnalysis from "@/components/EnhancedAIAnalysis";
 import ExportShareButtons from "@/components/ExportShareButtons";
 import { AdsterraSlot } from "@/components/ads/AdsterraSlot";
-import { AdsettraSlot } from "@/components/ads/AdsettraSlot";
-import { AutoAdSlot } from "@/components/ads/AutoAdSlot";
+
+declare global {
+  interface Window {
+    adsbygoogle: any[];
+  }
+}
 
 interface InsuranceCalculation {
   comprehensivePremium: number;
@@ -187,7 +191,6 @@ export default function CarInsurancePremiumEstimator() {
     >
       <div className="space-y-8">
         <AdsterraSlot position="top" className="mb-6" />
-        <AdsettraSlot position="top" className="mb-6" />
 
         {/* Title */}
         <div className="text-center space-y-4">

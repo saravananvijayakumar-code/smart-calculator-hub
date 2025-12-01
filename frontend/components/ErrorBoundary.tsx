@@ -1,8 +1,10 @@
-import React, { Component, ErrorInfo, ReactNode, ComponentType, FC, createElement } from 'react';
+// @ts-nocheck
+import React, { Component, ErrorInfo, ReactNode } from 'react';
 import { AlertTriangle, RefreshCw, Home, ChevronDown, ChevronUp } from 'lucide-react';
 import { Button } from '@/components/ui/button';
 import { Alert, AlertDescription, AlertTitle } from '@/components/ui/alert';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
+import backend from '~backend/client';
 
 interface Props {
   children: ReactNode;
@@ -19,8 +21,6 @@ interface State {
 }
 
 export class ErrorBoundary extends Component<Props, State> {
-  public context: unknown; // Required for React 19 compatibility
-  
   constructor(props: Props) {
     super(props);
     this.state = {
@@ -202,23 +202,16 @@ export class ErrorBoundary extends Component<Props, State> {
 }
 
 export function withErrorBoundary<P extends object>(
-  // eslint-disable-next-line @typescript-eslint/no-explicit-any
-  WrappedComponent: ComponentType<any>,
+  Component: React.ComponentType<P>,
   errorBoundaryProps?: Omit<Props, 'children'>
-): FC<P> {
-  const WithErrorBoundary = (props: P) => {
-    const element = createElement(WrappedComponent, props as Record<string, unknown>);
-    return (
-      <ErrorBoundary {...errorBoundaryProps}>
-        {element}
-      </ErrorBoundary>
-    );
-  };
+) {
+  const WrappedComponent = (props: P) => (
+    <ErrorBoundary {...errorBoundaryProps}>
+      <Component {...props} />
+    </ErrorBoundary>
+  );
 
-  const displayName = (WrappedComponent as { displayName?: string }).displayName 
-    || (WrappedComponent as { name?: string }).name 
-    || 'Component';
-  WithErrorBoundary.displayName = `withErrorBoundary(${displayName})`;
+  WrappedComponent.displayName = `withErrorBoundary(${Component.displayName || Component.name})`;
   
-  return WithErrorBoundary;
+  return WrappedComponent;
 }

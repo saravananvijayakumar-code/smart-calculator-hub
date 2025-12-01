@@ -14,7 +14,7 @@ import { AIAnalysis } from '@/components/AIAnalysis';
 import ExportShareButtons from '@/components/ExportShareButtons';
 import { SEOHead } from '@/components/SEOHead';
 import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
-import { AdsettraSlot } from '@/components/ads/AdsettraSlot';
+import { AdsterraSlot } from '@/components/ads/AdsterraSlot';
 
 interface LifeExpectancyResults {
   lifeExpectancy: number;
@@ -325,7 +325,6 @@ export default function LifeExpectancyCalculator() {
       <div className="min-h-screen bg-gradient-to-br from-blue-50 via-cyan-50 to-teal-50 dark:from-gray-900 dark:via-blue-900/20 dark:to-gray-900 py-8">
         <div className="container mx-auto px-4 max-w-7xl">
           <AdsterraSlot position="top" className="mb-6" />
-          <AdsettraSlot position="top" className="mb-6" />
 
           <div className="text-center mb-8">
             <div className="inline-flex items-center justify-center w-20 h-20 bg-gradient-to-br from-blue-500 to-cyan-500 rounded-3xl mb-4 shadow-lg">
@@ -342,7 +341,6 @@ export default function LifeExpectancyCalculator() {
           <div className="grid lg:grid-cols-3 gap-8 mb-12">
             <div className="lg:col-span-2 space-y-6">
               <AdsterraSlot position="middle" className="mb-6" />
-              <AdsettraSlot position="middle" className="mb-6" />
 
               <Card className="shadow-xl border-0 bg-white/80 dark:bg-gray-800/80 backdrop-blur">
                 <CardHeader>
@@ -521,7 +519,6 @@ export default function LifeExpectancyCalculator() {
                   </div>
 
                   <AdsterraSlot position="middle" />
-                  <AdsettraSlot position="middle" />
 
                   <Card className="shadow-xl border-0">
                     <CardHeader>
@@ -611,7 +608,6 @@ export default function LifeExpectancyCalculator() {
 
             <div className="space-y-6">
               <AdsterraSlot position="middle" />
-              <AdsettraSlot position="middle" />
               
               <Card className="shadow-xl border-0 sticky top-4">
                 <CardHeader>

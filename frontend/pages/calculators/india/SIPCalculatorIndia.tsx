@@ -22,8 +22,7 @@ import {
   Wallet,
   TrendingDown,
   Award,
-  ChevronRight,
-  Banknote
+  ChevronRight
 } from 'lucide-react';
 import { CalculatorLayoutWithAds } from '../../../components/CalculatorLayoutWithAds';
 import { formatCurrency } from '../../../utils/formatting';

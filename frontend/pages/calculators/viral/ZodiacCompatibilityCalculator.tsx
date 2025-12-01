@@ -750,7 +750,7 @@ export default function ZodiacCompatibilityCalculator() {
           </ul>
 
           <div className="my-12">
-            <InFeedAd />
+            <InFeedAd index={1} />
           </div>
 
           <h3 className="text-2xl font-bold text-gray-900 dark:text-white mt-8 mb-4">

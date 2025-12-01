@@ -4,14 +4,12 @@ import { Input } from '@/components/ui/input';
 import { Label } from '@/components/ui/label';
 import { Button } from '@/components/ui/button';
 import { Save, TrendingUp, Wallet, Target, DollarSign, Calendar, Sparkles, Award, Shield, Lightbulb, AlertCircle, CheckCircle2, Calculator } from 'lucide-react';
-import { CalculatorLayoutWithAds } from '../../../components/CalculatorLayoutWithAds';
+import { CalculatorLayout } from '../../../components/CalculatorLayout';
 import { AIAnalysis } from '../../../components/AIAnalysis';
 import ExportShareButtons from '../../../components/ExportShareButtons';
 import { useCalculatorHistory } from '../../../hooks/useCalculatorHistory';
 import { useToast } from '@/components/ui/use-toast';
 import { AdsterraSlot } from '../../../components/ads/AdsterraSlot';
-import { AdsettraSlot } from '../../../components/ads/AdsettraSlot';
-import { AutoAdSlot } from '../../../components/ads/AutoAdSlot';
 import type { AnalysisRequest } from '~backend/ai-analysis/types';
 
 interface RetirementResult {
@@ -135,14 +133,13 @@ export default function RetirementCalculator() {
   const goalProgress = parseFloat(retirementGoal) > 0 ? (result.finalAmount / parseFloat(retirementGoal)) * 100 : 0;
 
   return (
-    <CalculatorLayoutWithAds
+    <CalculatorLayout
       title="Retirement Calculator - Plan Your Financial Freedom | 2025"
       description="Free retirement calculator to plan your golden years. Calculate retirement savings, investment growth, and monthly income needed. Expert retirement planning tools for 2025."
       keywords="retirement calculator, retirement planning, pension calculator, 401k calculator, retirement savings calculator, financial freedom calculator, retire early calculator"
     >
       <div className="max-w-7xl mx-auto space-y-8">
         <AdsterraSlot position="top" className="mb-6" />
-        <AdsettraSlot position="top" className="mb-6" />
 
         <div className="bg-gradient-to-br from-purple-50 via-blue-50 to-indigo-50 dark:from-purple-950/30 dark:via-blue-950/30 dark:to-indigo-950/30 rounded-2xl p-8 border border-purple-200 dark:border-purple-800 animate-in fade-in slide-in-from-bottom-4 duration-700">
           <div className="flex items-start gap-4 mb-6">
@@ -434,7 +431,6 @@ export default function RetirementCalculator() {
         </Card>
 
         <AdsterraSlot position="middle" className="my-6" />
-        <AdsettraSlot position="middle" className="my-6" />
 
         <div className="grid md:grid-cols-2 gap-6 animate-in fade-in slide-in-from-bottom duration-700 delay-200">
           <Card className="border-2 border-blue-100 dark:border-blue-900/50 hover:shadow-xl transition-all duration-300">
@@ -485,7 +481,6 @@ export default function RetirementCalculator() {
         </div>
 
         <AdsterraSlot position="middle" className="my-6" />
-        <AdsettraSlot position="middle" className="my-6" />
 
         <Card className="border-2 border-indigo-100 dark:border-indigo-900/50 animate-in fade-in slide-in-from-bottom duration-700 delay-300">
           <CardHeader className="bg-gradient-to-br from-indigo-50 to-purple-50 dark:from-indigo-950/50 dark:to-purple-950/50">
@@ -786,12 +781,10 @@ export default function RetirementCalculator() {
           </CardContent>
         </Card>
 
-
         <AdsterraSlot position="bottom" className="mt-6" />
-        <AdsettraSlot position="bottom" className="mt-6" />
 
-        <AutoAdSlot position="bottom" className="mt-6" />
+        <AdsterraSlot position="sidebar" className="mt-6" />
       </div>
-    </CalculatorLayoutWithAds>
+    </CalculatorLayout>
   );
 }

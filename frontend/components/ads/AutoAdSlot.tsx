@@ -8,7 +8,7 @@ interface AutoAdSlotProps {
 
 export function AutoAdSlot({ className = '', position = 'top', placement }: AutoAdSlotProps) {
   let finalPosition: 'top' | 'middle' | 'bottom' = position;
-
+  
   if (placement) {
     if (placement.includes('top') || placement.includes('banner')) {
       finalPosition = 'top';
@@ -18,12 +18,8 @@ export function AutoAdSlot({ className = '', position = 'top', placement }: Auto
       finalPosition = 'bottom';
     }
   }
-
-  return (
-    <div className={className}>
-      <AdsterraSlot position={finalPosition} />
-    </div>
-  );
+  
+  return <AdsterraSlot position={finalPosition} className={className} />;
 }
 
 export default AutoAdSlot;

@@ -12,6 +12,12 @@ import ExportShareButtons from "@/components/ExportShareButtons";
 import { AutoAdSlot } from "@/components/ads/AutoAdSlot";
 import { ADS_CONFIG } from "@/config/ads";
 
+declare global {
+  interface Window {
+    adsbygoogle: any[];
+  }
+}
+
 interface SettlementCalculation {
   economicDamages: number;
   nonEconomicDamages: number;

@@ -6,11 +6,7 @@ interface NativeBannerProps {
 }
 
 export function NativeBanner({ className = '', position = 'top' }: NativeBannerProps) {
-  return (
-    <div className={className}>
-      <AdsterraSlot position={position} />
-    </div>
-  );
+  return <AdsterraSlot position={position} className={className} />;
 }
 
 export default NativeBanner;
