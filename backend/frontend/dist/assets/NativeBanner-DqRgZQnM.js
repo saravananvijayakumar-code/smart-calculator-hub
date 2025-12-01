@@ -1,0 +1,1 @@
+import{j as s}from"./ui-vendor-CXejv-Vd.js";import{A as o}from"./AdsterraSlot-KARub96N.js";function r({className:r="",position:i="top"}){return s.jsx("div",{className:r,children:s.jsx(o,{position:i})})}export{r as N};
