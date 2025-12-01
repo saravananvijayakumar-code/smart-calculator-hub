@@ -1,5 +1,4 @@
 import { AdsterraSlot } from './AdsterraSlot';
-import { AdsettraSlot } from './AdsettraSlot';
 
 interface AutoAdSlotProps {
   className?: string;
@@ -21,9 +20,8 @@ export function AutoAdSlot({ className = '', position = 'top', placement }: Auto
   }
 
   return (
-    <div className={`space-y-4 ${className}`}>
+    <div className={className}>
       <AdsterraSlot position={finalPosition} />
-      <AdsettraSlot position={finalPosition} />
     </div>
   );
 }

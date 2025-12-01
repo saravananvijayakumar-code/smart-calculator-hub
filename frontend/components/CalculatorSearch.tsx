@@ -12,7 +12,6 @@ import {
   DialogTrigger,
 } from '@/components/ui/dialog';
 import { Link } from 'react-router-dom';
-import backend from '~backend/client';
 
 interface Calculator {
   name: string;

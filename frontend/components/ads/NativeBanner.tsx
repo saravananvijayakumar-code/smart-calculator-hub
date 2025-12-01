@@ -1,5 +1,4 @@
 import { AdsterraSlot } from './AdsterraSlot';
-import { AdsettraSlot } from './AdsettraSlot';
 
 interface NativeBannerProps {
   className?: string;
@@ -8,9 +7,8 @@ interface NativeBannerProps {
 
 export function NativeBanner({ className = '', position = 'top' }: NativeBannerProps) {
   return (
-    <div className={`space-y-4 ${className}`}>
+    <div className={className}>
       <AdsterraSlot position={position} />
-      <AdsettraSlot position={position} />
     </div>
   );
 }

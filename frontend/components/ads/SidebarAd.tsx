@@ -1,5 +1,4 @@
 import { AdsterraSlot } from './AdsterraSlot';
-import { AdsettraSlot } from './AdsettraSlot';
 
 interface SidebarAdProps {
   className?: string;
@@ -7,9 +6,8 @@ interface SidebarAdProps {
 
 export function SidebarAd({ className = '' }: SidebarAdProps) {
   return (
-    <div className={`space-y-4 ${className}`}>
+    <div className={className}>
       <AdsterraSlot position="top" />
-      <AdsettraSlot position="top" />
     </div>
   );
 }

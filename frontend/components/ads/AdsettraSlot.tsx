@@ -1,4 +1,4 @@
-import { useEffect, useRef } from 'react';
+import { AdsterraSlot } from './AdsterraSlot';
 
 interface AdsettraSlotProps {
   className?: string;
@@ -6,40 +6,10 @@ interface AdsettraSlotProps {
   adCode?: string;
 }
 
+// AdsettraSlot now redirects to AdsterraSlot since we only use Adsterra
 export function AdsettraSlot({
   className = '',
   position = 'top',
-  adCode = '//example.adsettra.com/ad.js'
 }: AdsettraSlotProps) {
-  const containerRef = useRef<HTMLDivElement>(null);
-  const scriptLoadedRef = useRef(false);
-
-  useEffect(() => {
-    if (scriptLoadedRef.current || !containerRef.current) return;
-
-    const script = document.createElement('script');
-    script.async = true;
-    script.setAttribute('data-cfasync', 'false');
-    script.src = adCode;
-
-    script.onerror = () => {
-      console.debug('Adsettra script failed to load');
-    };
-
-    containerRef.current.appendChild(script);
-    scriptLoadedRef.current = true;
-
-    return () => {
-      scriptLoadedRef.current = false;
-    };
-  }, [adCode]);
-
-  return (
-    <div className={`my-4 ${className}`}>
-      <div className="text-xs text-center text-muted-foreground mb-2">Advertisement</div>
-      <div ref={containerRef}>
-        <div id={`adsettra-container-${position}`}></div>
-      </div>
-    </div>
-  );
+  return <AdsterraSlot className={className} position={position} />;
 }
