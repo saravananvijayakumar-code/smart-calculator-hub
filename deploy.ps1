@@ -97,6 +97,30 @@ if ($LASTEXITCODE -ne 0) {
 
 Write-Host "✅ Active project set to: $PROJECT_ID" -ForegroundColor Green
 
+# Check billing status
+Write-Host "Checking billing status..." -ForegroundColor Cyan
+$billingInfo = gcloud billing projects describe $PROJECT_ID --format="value(billingEnabled)" 2>$null
+if ($billingInfo -ne "True") {
+  Write-Host ""
+  Write-Host "❌ BILLING NOT ENABLED" -ForegroundColor Red
+  Write-Host ""
+  Write-Host "Your project needs billing enabled to deploy to Cloud Run." -ForegroundColor Yellow
+  Write-Host ""
+  Write-Host "Please follow these steps:" -ForegroundColor White
+  Write-Host "1. Go to: https://console.cloud.google.com/billing/linkedaccount?project=$PROJECT_ID" -ForegroundColor Cyan
+  Write-Host "2. Link a billing account (credit card required)" -ForegroundColor White
+  Write-Host "3. Google Cloud offers $300 free credits for new accounts" -ForegroundColor Green
+  Write-Host "4. Cloud Run has a generous free tier:" -ForegroundColor Green
+  Write-Host "   - 2 million requests/month free" -ForegroundColor Gray
+  Write-Host "   - 360,000 GB-seconds of memory free" -ForegroundColor Gray
+  Write-Host "   - 180,000 vCPU-seconds free" -ForegroundColor Gray
+  Write-Host ""
+  Write-Host "After enabling billing, run this script again." -ForegroundColor Yellow
+  Write-Host ""
+  exit 1
+}
+Write-Host "✅ Billing is enabled" -ForegroundColor Green
+
 # ======================================================
 # 3. ENABLE REQUIRED APIS
 # ======================================================
