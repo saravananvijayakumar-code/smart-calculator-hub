@@ -39,7 +39,7 @@ RUN npm install --legacy-peer-deps
 
 # Build Encore app
 WORKDIR /app
-RUN encore build
+RUN npx encore build
 
 # Expose port
 EXPOSE 8080
