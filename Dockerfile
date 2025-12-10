@@ -19,26 +19,34 @@ RUN npx vite build --outDir=../backend/frontend/dist
 # Backend stage
 FROM node:20-alpine AS backend
 
-WORKDIR /workspace
+WORKDIR /app
 
 # Install Encore CLI
 RUN npm install -g encore.dev
 
-# Copy entire project (needed for encore.app)
-COPY . ./
+# Copy root files
+COPY encore.app package.json ./
+
+# Copy backend code
+COPY backend/ ./backend/
 
 # Copy built frontend from previous stage
 COPY --from=frontend-builder /app/backend/frontend/dist ./backend/frontend/dist
 
 # Install backend dependencies
-WORKDIR /workspace/backend
+WORKDIR /app/backend
 RUN npm install --legacy-peer-deps
+
+# Build Encore app
+WORKDIR /app
+RUN encore build
 
 # Expose port
 EXPOSE 8080
 
-# Set working directory back to root
-WORKDIR /workspace
+# Set environment for production
+ENV NODE_ENV=production
+ENV PORT=8080
 
-# Start Encore
-CMD ["encore", "run", "--port", "8080"]
+# Start Encore in production mode
+CMD ["node", "dist/backend/main.js"]
