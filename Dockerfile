@@ -40,8 +40,9 @@ EXPOSE 8080
 # Set working directory back to root
 WORKDIR /workspace
 
-# Set environment variables
+# Set environment variables for Encore
 ENV PORT=8080
+ENV ENCORE_LISTEN_ADDR=0.0.0.0:8080
 
-# Start Encore daemon and run on correct port
-CMD ["encore", "run", "--listen", "0.0.0.0:8080"]
+# Start Encore
+CMD ["encore", "run"]
