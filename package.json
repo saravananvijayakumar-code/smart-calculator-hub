@@ -3,9 +3,6 @@
     "version":  "1.0.0",
     "type":  "module",
     "packageManager":  "npm@10.8.2",
-    "workspaces":  [
-                       "frontend"
-                   ],
     "dependencies":  {
                          "@tanstack/react-query":  "^5.90.6",
                          "chart.js":  "^4.5.1",
