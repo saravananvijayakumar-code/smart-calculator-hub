@@ -1,0 +1,20 @@
+steps:
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'build', '-t', 'gcr.io/smartcalculatorhub-472911/smartcalculatorhubg', '.' ]
+  - name: 'gcr.io/cloud-builders/docker'
+    args: [ 'push', 'gcr.io/smartcalculatorhub-472911/smartcalculatorhubg' ]
+  - name: 'gcr.io/google.com/cloudsdktool/cloud-sdk'
+    entrypoint: gcloud
+    args:
+      [
+        'run',
+        'deploy',
+        'smartcalculatorhubg',
+        '--image',
+        'gcr.io/smartcalculatorhub-472911/smartcalculatorhubg',
+        '--region',
+        'australia-southeast1',
+        '--platform',
+        'managed',
+        '--allow-unauthenticated'
+      ]

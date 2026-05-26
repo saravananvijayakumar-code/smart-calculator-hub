@@ -1,0 +1,28 @@
+{
+  "buildCommand": "cd frontend && npm install && npx vite build",
+  "outputDirectory": "frontend/dist",
+  "framework": null,
+  "rewrites": [
+    { "source": "/api/health", "destination": "/api/health" },
+    { "source": "/api/auth/admin/login", "destination": "/api/auth/login" },
+    { "source": "/api/ai-text-detector/detect", "destination": "/api/ai-text-detector/detect" },
+    { "source": "/api/exchange/currencies", "destination": "/api/exchange/currencies" },
+    { "source": "/api/exchange/convert", "destination": "/api/exchange/convert" },
+    { "source": "/api/exchange/rate", "destination": "/api/exchange/rate" },
+    { "source": "/api/exchange/rates", "destination": "/api/exchange/rates" },
+    { "source": "/api/au/paycalc/estimate", "destination": "/api/au-tax/estimate" },
+    { "source": "/api/au/bonus/withholding", "destination": "/api/au-tax/bonus" },
+    { "source": "/api/au/student-loan/projection", "destination": "/api/au-tax/student-loan" },
+    { "source": "/(.*)", "destination": "/index.html" }
+  ],
+  "headers": [
+    {
+      "source": "/api/(.*)",
+      "headers": [
+        { "key": "Access-Control-Allow-Origin", "value": "*" },
+        { "key": "Access-Control-Allow-Methods", "value": "GET, POST, PUT, DELETE, OPTIONS" },
+        { "key": "Access-Control-Allow-Headers", "value": "Content-Type, Authorization" }
+      ]
+    }
+  ]
+}

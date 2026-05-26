@@ -1,0 +1,62 @@
+name: Deploy to Google Cloud
+
+on:
+  push:
+    branches:
+      - main
+  pull_request:
+    branches:
+      - main
+
+env:
+  PROJECT_ID: smartcalculatorhub
+  REGION: us-central1
+  SERVICE_NAME: calculator-backend
+
+jobs:
+  deploy:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+
+      - name: Setup Bun
+        uses: oven-sh/setup-bun@v1
+        with:
+          bun-version: latest
+
+      - name: Authenticate to Google Cloud
+        uses: google-github-actions/auth@v2
+        with:
+          credentials_json: ${{ secrets.GCP_SERVICE_ACCOUNT_KEY }}
+
+      - name: Set up Cloud SDK
+        uses: google-github-actions/setup-gcloud@v2
+
+      - name: Configure Docker for GCR
+        run: gcloud auth configure-docker
+
+      - name: Submit build to Cloud Build
+        run: |
+          gcloud builds submit \
+            --config cloudbuild.yaml \
+            --substitutions=COMMIT_SHA=${{ github.sha }}
+
+      - name: Get Cloud Run URL
+        id: deploy
+        run: |
+          URL=$(gcloud run services describe $SERVICE_NAME \
+            --region=$REGION \
+            --format="value(status.url)")
+          echo "url=$URL" >> $GITHUB_OUTPUT
+
+      - name: Test deployment
+        run: |
+          echo "Testing deployment at: ${{ steps.deploy.outputs.url }}"
+          curl -f ${{ steps.deploy.outputs.url }}/health || exit 1
