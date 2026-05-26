@@ -5,16 +5,6 @@ import { SEOHead } from "@/components/SEOHead";
 
 const viralCalculators = [
   {
-    title: "Love Compatibility Calculator 💕",
-    description: "Discover your cosmic connection! Calculate love compatibility with your crush based on zodiac signs and numerology.",
-    icon: Heart,
-    path: "/calculators/viral/love-compatibility",
-    color: "text-pink-500",
-    bgColor: "bg-pink-50 dark:bg-pink-950/20",
-    emoji: "💕",
-    tooltip: "Test your love chemistry!"
-  },
-  {
     title: "Zodiac Compatibility Calculator ✨",
     description: "Discover your cosmic connection! Find out how compatible you are with your crush based on zodiac signs.",
     icon: Heart,

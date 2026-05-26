@@ -355,12 +355,6 @@ export function Navigation() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuItem asChild>
-                    <Link to="/tools/shortener" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🔗</span>
-                      <span className="text-sm">Smart Shortener</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
                     <Link to="/tools/speed-test" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
                       <span className="text-lg">📡</span>
                       <span className="text-sm">Internet Speed Test</span>

@@ -110,18 +110,6 @@ export function MobileNavigation({ isOpen, onClose, calculatorCategories }: Mobi
                 <span>Home</span>
               </Link>
 
-              <Link 
-                to="/blog" 
-                className="flex items-center gap-3 px-4 py-3.5 text-base font-semibold rounded-xl hover:bg-blue-50 dark:hover:bg-blue-950/30 transition-colors active:scale-[0.98] text-gray-900 dark:text-white"
-                onClick={onClose}
-              >
-                <div className="flex items-center justify-center w-10 h-10 rounded-lg bg-blue-100 dark:bg-blue-900/30">
-                  <svg className="h-5 w-5 text-blue-600 dark:text-blue-400" fill="none" stroke="currentColor" viewBox="0 0 24 24">
-                    <path strokeLinecap="round" strokeLinejoin="round" strokeWidth={2} d="M19 20H5a2 2 0 01-2-2V6a2 2 0 012-2h10a2 2 0 012 2v1m2 13a2 2 0 01-2-2V7m2 13a2 2 0 002-2V9a2 2 0 00-2-2h-2m-4-3H9M7 16h6M7 8h6v4H7V8z" />
-                  </svg>
-                </div>
-                <span>Blog</span>
-              </Link>
 
               <div>
                 <button
@@ -264,10 +252,6 @@ export function MobileNavigation({ isOpen, onClose, calculatorCategories }: Mobi
                       <span className="text-xl">🔥</span>
                       <span>All Viral Tools</span>
                     </Link>
-                    <Link to="/calculators/viral/love-compatibility" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">💕</span>
-                      <span>Love Compatibility</span>
-                    </Link>
                     <Link to="/calculators/viral/zodiac-compatibility" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
                       <span className="text-xl">✨</span>
                       <span>Zodiac Compatibility</span>
@@ -356,10 +340,6 @@ export function MobileNavigation({ isOpen, onClose, calculatorCategories }: Mobi
                       <span className="text-xl">🌐</span>
                       <span>Know My IP</span>
                     </Link>
-                    <Link to="/tools/shortener" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">🔗</span>
-                      <span>Smart Shortener</span>
-                    </Link>
                     <Link to="/tools/speed-test" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
                       <span className="text-xl">📡</span>
                       <span>Speed Test</span>
@@ -402,18 +382,7 @@ export function MobileNavigation({ isOpen, onClose, calculatorCategories }: Mobi
                   <ChevronDown className={`h-5 w-5 text-gray-600 dark:text-gray-400 transition-transform ${expandedSection === 'finder' ? 'rotate-180' : ''}`} />
                 </button>
 
-                {expandedSection === 'finder' && (
-                  <div className="mt-2 ml-12 mr-2 space-y-1 animate-in slide-in-from-top-2 duration-200">
-                    <Link to="/finder/tools" className="flex items-center gap-3 px-4 py-3 text-base font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200" onClick={onClose}>
-                      <span className="text-xl">🔍</span>
-                      <span>All Finder Tools</span>
-                    </Link>
-                    <Link to="/calculators/viral/calorie-burn" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">🔥</span>
-                      <span>Calorie Burn Calculator</span>
-                    </Link>
-                  </div>
-                )}
+                
               </div>
 
               <div>
@@ -430,34 +399,7 @@ export function MobileNavigation({ isOpen, onClose, calculatorCategories }: Mobi
                   <ChevronDown className={`h-5 w-5 text-gray-600 dark:text-gray-400 transition-transform ${expandedSection === 'ai' ? 'rotate-180' : ''}`} />
                 </button>
 
-                {expandedSection === 'ai' && (
-                  <div className="mt-2 ml-12 mr-2 space-y-1 animate-in slide-in-from-top-2 duration-200">
-                    <Link to="/ai/ai-text-detector" className="flex items-center gap-3 px-4 py-3 text-base font-semibold rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200" onClick={onClose}>
-                      <span className="text-xl">🔍</span>
-                      <span>AI Text Detector</span>
-                    </Link>
-                    <Link to="/ai/relationships" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">💕</span>
-                      <span>Relationships</span>
-                    </Link>
-                    <Link to="/ai/wellness" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">🌱</span>
-                      <span>Wellness</span>
-                    </Link>
-                    <Link to="/ai/parenting" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">👶</span>
-                      <span>Parenting</span>
-                    </Link>
-                    <Link to="/ai/shopping" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">🛒</span>
-                      <span>Shopping</span>
-                    </Link>
-                    <Link to="/ai/social" className="flex items-center gap-3 px-4 py-3 text-base rounded-lg hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-colors text-gray-800 dark:text-gray-200 font-medium" onClick={onClose}>
-                      <span className="text-xl">#️⃣</span>
-                      <span>Social Media</span>
-                    </Link>
-                  </div>
-                )}
+                
               </div>
 
               <Link 

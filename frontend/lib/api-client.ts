@@ -118,8 +118,8 @@ export class Client {
     calculate: async () => { throw new Error("Compatibility calculator is not available"); },
   };
   public readonly vision = {
-    analyze: async () => { throw new Error("Vision analysis is not available"); },
-    getNutrition: async () => { throw new Error("Nutrition analysis is not available"); },
+    analyze: async () => ({ labels: [], topFood: "Unknown", confidence: 0 }),
+    getNutrition: async () => ({ name: "Unknown", calories: 0, servingSize: "1 serving" }),
     analyzePlant: async () => { throw new Error("Plant analysis is not available"); },
     analyzePetBreed: async () => { throw new Error("Pet breed analysis is not available"); },
     analyzeDecorStyle: async () => { throw new Error("Decor style analysis is not available"); },
@@ -128,9 +128,18 @@ export class Client {
   public readonly blogV2 = { list: async () => ({ blogs: [] }), get: async () => null };
   public readonly calc_history = { list: async () => ({ entries: [], total: 0 }), save: async () => ({}) };
   public readonly ai_history = { list: async () => ({ entries: [] }), save: async () => ({}) };
-  public readonly pageviews = { track: async () => ({}) };
-  public readonly pwa_stats = { track: async () => ({}) };
-  public readonly pwa_install = { track: async () => ({}) };
+  public readonly pageviews = { 
+    track: async () => ({}),
+    getStats: async () => ({ totalViews: 0, todayViews: 0, thisWeekViews: 0, thisMonthViews: 0, uniqueVisitors: 0, viewsByPage: {}, viewsByCountry: {} })
+  };
+  public readonly pwa_stats = { 
+    track: async () => ({}),
+    getStats: async () => ({ totalInstalls: 0, totalShares: 0, totalOfflineAccess: 0, recentEvents: [] })
+  };
+  public readonly pwa_install = { 
+    track: async () => ({}),
+    getStats: async () => ({ totalInstalls: 0, last7Days: [], last30Days: [], byPlatform: [], byCountry: [], recentInstalls: [] })
+  };
   public readonly shortener = { create: async () => ({}) };
   public readonly user = { getOrCreate: async () => null };
   public readonly sources = {};

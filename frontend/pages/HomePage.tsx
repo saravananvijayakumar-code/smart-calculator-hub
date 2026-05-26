@@ -68,7 +68,6 @@ const calculatorCategories = [
     icon: Flame,
     path: '/viral/tools',
     calculators: [
-      { name: 'Love Compatibility', path: '/calculators/viral/love-compatibility' },
       { name: 'Zodiac Match', path: '/calculators/viral/zodiac-compatibility' },
       { name: 'Life Path Number', path: '/calculators/viral/life-path-number' }
     ],
@@ -277,7 +276,6 @@ const allCalculators = [
   { name: 'Car Insurance Calculator', path: '/calculators/insurance/car-insurance', category: 'Insurance', keywords: ['car', 'auto', 'insurance', 'vehicle', 'coverage', 'premium'] },
   
   // Viral/Fun Calculators
-  { name: 'Love Compatibility Calculator', path: '/calculator/love-compatibility', category: 'Fun', keywords: ['love', 'compatibility', 'relationship', 'match', 'romance', 'crush', 'partner', 'soulmate'] },
   { name: 'Zodiac Compatibility Calculator', path: '/calculators/viral/zodiac-compatibility', category: 'Fun', keywords: ['zodiac', 'astrology', 'compatibility', 'horoscope', 'signs', 'star', 'cosmic', 'relationship'] },
   { name: 'Life Path Number Calculator', path: '/calculators/viral/life-path-number', category: 'Fun', keywords: ['numerology', 'life path', 'number', 'destiny', 'purpose', 'spiritual', 'birthdate', 'personality'] },
   { name: 'Friend Compatibility Calculator', path: '/calculators/viral/friend-compatibility', category: 'Fun', keywords: ['friend', 'friendship', 'bff', 'compatibility', 'best friend', 'buddy', 'pal', 'match'] },

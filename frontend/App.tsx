@@ -185,7 +185,7 @@ const AppContent = () => {
                 <Route path="/share/:id" element={<ShareResultPage />} />
                 <Route path="/history" element={<HistoryPage />} />
                 <Route path="/i18n" element={<I18nDemoPage />} />
-                <Route path="/know-my-ip" element={<KnowMyIPPage />} />
+                <Route path="/tools/knowmyip" element={<KnowMyIPPage />} />
                 <Route path="/test-logs" element={<TestLogsPage />} />
                 <Route path="/calculators/finance" element={<FinanceToolsPage />} />
                 <Route path="/calculators/health" element={<HealthToolsPage />} />
@@ -196,7 +196,7 @@ const AppContent = () => {
                 <Route path="/calculators/india" element={<IndiaToolsPage />} />
                 <Route path="/calculators/australia" element={<AustraliaToolsPage />} />
                 <Route path="/calculators/insurance" element={<InsuranceToolsPage />} />
-                <Route path="/calculators/viral" element={<ViralToolsPage />} />
+                <Route path="/viral/tools" element={<ViralToolsPage />} />
                 <Route path="/au/pay-calculator" element={<AUPayTaxHub />} />
                 <Route path="/calculators/health/bmi" element={<BMICalculator />} />
                 <Route path="/calculators/health/weight-loss-steps" element={<WeightLossStepCalculator />} />
@@ -266,14 +266,14 @@ const AppContent = () => {
                 <Route path="/calculators/utility/discount" element={<DiscountCalculator />} />
                 <Route path="/calculators/utility/date" element={<DateCalculator />} />
                 <Route path="/calculators/utility/password" element={<PasswordGenerator />} />
-                <Route path="/calculators/insurance/life" element={<LifeInsuranceCalculator />} />
-                <Route path="/calculators/insurance/health" element={<HealthInsuranceCalculator />} />
+                <Route path="/calculators/insurance/life-insurance" element={<LifeInsuranceCalculator />} />
+                <Route path="/calculators/insurance/health-insurance" element={<HealthInsuranceCalculator />} />
                 <Route path="/calculators/insurance/travel" element={<TravelInsuranceCalculator />} />
                 <Route path="/calculators/insurance/pet" element={<PetInsuranceCalculator />} />
                 <Route path="/calculators/insurance/business-liability" element={<BusinessLiabilityCalculator />} />
-                <Route path="/calculators/insurance/legal-settlement" element={<LegalSettlementEstimator />} />
-                <Route path="/calculators/insurance/solar-savings" element={<SolarSavingsCalculator />} />
-                <Route path="/calculators/insurance/car" element={<CarInsurancePremiumEstimator />} />
+                <Route path="/calculator/legal-settlement" element={<LegalSettlementEstimator />} />
+                <Route path="/calculator/solar-savings" element={<SolarSavingsCalculator />} />
+                <Route path="/calculator/car-insurance-premium" element={<CarInsurancePremiumEstimator />} />
                 <Route path="/calculators/viral/zodiac-compatibility" element={<ZodiacCompatibilityCalculator />} />
                 <Route path="/calculators/viral/how-long-to-watch" element={<HowLongToWatchCalculator />} />
                 <Route path="/calculators/viral/life-path-number" element={<LifePathNumberCalculator />} />
@@ -281,18 +281,18 @@ const AppContent = () => {
                 <Route path="/calculators/viral/calorie-burn" element={<CalorieBurnCalculator />} />
                 <Route path="/calculators/viral/life-expectancy" element={<LifeExpectancyCalculator />} />
                 <Route path="/tools" element={<ToolsHubPage />} />
-                <Route path="/tools/internet-speed" element={<InternetSpeedTest />} />
+                <Route path="/tools/speed-test" element={<InternetSpeedTest />} />
                 <Route path="/tools/ip-reputation" element={<IPReputationCheck />} />
                 <Route path="/tools/ssl-checker" element={<SSLDomainChecker />} />
                 <Route path="/tools/dns-ping" element={<DNSPingTest />} />
                 <Route path="/tools/browser-info" element={<BrowserDeviceInfo />} />
                 <Route path="/tools/image-compressor" element={<ImageCompressor />} />
-                <Route path="/timer" element={<SmartTimerHub />} />
-                <Route path="/timer/stopwatch" element={<StopwatchPage />} />
-                <Route path="/timer/countdown" element={<CountdownPage />} />
-                <Route path="/timer/pomodoro" element={<PomodoroPage />} />
-                <Route path="/timer/multi" element={<MultiTimerPage />} />
-                <Route path="/timer/event" element={<EventCountdownPage />} />
+                <Route path="/smarttimer" element={<SmartTimerHub />} />
+                <Route path="/smarttimer/stopwatch" element={<StopwatchPage />} />
+                <Route path="/smarttimer/countdown" element={<CountdownPage />} />
+                <Route path="/smarttimer/pomodoro" element={<PomodoroPage />} />
+                <Route path="/smarttimer/multi-timer" element={<MultiTimerPage />} />
+                <Route path="/smarttimer/event" element={<EventCountdownPage />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </Suspense>
