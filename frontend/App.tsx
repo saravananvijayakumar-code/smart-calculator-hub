@@ -166,6 +166,9 @@ const PomodoroPage = DISABLE_LAZY ? require('./pages/smarttimer/PomodoroPage').d
 const MultiTimerPage = DISABLE_LAZY ? require('./pages/smarttimer/MultiTimerPage').default : lazy(() => import('./pages/smarttimer/MultiTimerPage'));
 const EventCountdownPage = DISABLE_LAZY ? require('./pages/smarttimer/EventCountdownPage').default : lazy(() => import('./pages/smarttimer/EventCountdownPage'));
 
+const GamesHubPage = lazy(() => import('./pages/games/GamesHubPage'));
+const PacManGame = lazy(() => import('./pages/games/PacManGame'));
+
 
 const AppContent = () => {
   usePageTracking();
@@ -293,6 +296,8 @@ const AppContent = () => {
                 <Route path="/smarttimer/pomodoro" element={<PomodoroPage />} />
                 <Route path="/smarttimer/multi-timer" element={<MultiTimerPage />} />
                 <Route path="/smarttimer/event" element={<EventCountdownPage />} />
+                                <Route path="/games" element={<GamesHubPage />} />
+                <Route path="/games/pacman" element={<PacManGame />} />
                 <Route path="*" element={<Navigate to="/" replace />} />
               </Routes>
             </Suspense>
