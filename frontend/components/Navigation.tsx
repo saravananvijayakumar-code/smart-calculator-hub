@@ -151,9 +151,6 @@ export function Navigation() {
               Home
             </Link>
             
-            <Link to="/blog" className="px-3 py-1.5 text-[13px] font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white rounded-md hover:bg-gray-100 dark:hover:bg-gray-800/50 transition-all duration-150">
-              Blog
-            </Link>
             
             <DropdownMenu>
               <DropdownMenuTrigger asChild>
@@ -258,12 +255,6 @@ export function Navigation() {
                     </Link>
                   </DropdownMenuItem>
                   <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild>
-                    <Link to="/calculators/viral/love-compatibility" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">💕</span>
-                      <span className="text-sm">Love Compatibility</span>
-                    </Link>
-                  </DropdownMenuItem>
                   <DropdownMenuItem asChild>
                     <Link to="/calculators/viral/zodiac-compatibility" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
                       <span className="text-lg">✨</span>
@@ -409,100 +400,7 @@ export function Navigation() {
               </DropdownMenuContent>
             </DropdownMenu>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="h-8 px-3 text-[13px] font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/50">
-                  Finder
-                  <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-50" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-72">
-                <div className="p-1 space-y-1">
-                  <DropdownMenuItem asChild>
-                    <Link to="/finder/tools" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent font-medium">
-                      <span className="text-lg">🔍</span>
-                      <span className="text-sm">All Finder Tools</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild>
-                    <Link to="/finder/tools/plantfinder" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🌿</span>
-                      <span className="text-sm">AI Plant Finder</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/finder/tools/pet-breed-finder" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🐶</span>
-                      <span className="text-sm">Pet Breed Finder</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/finder/tools/home-decor-style-finder" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🏠</span>
-                      <span className="text-sm">Home Decor Style Finder</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/calculators/viral/calorie-burn" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🔥</span>
-                      <span className="text-sm">Calorie Burn Calculator</span>
-                    </Link>
-                  </DropdownMenuItem>
-                </div>
-              </DropdownMenuContent>
-            </DropdownMenu>
 
-            <DropdownMenu>
-              <DropdownMenuTrigger asChild>
-                <Button variant="ghost" size="sm" className="h-8 px-3 text-[13px] font-medium text-gray-700 dark:text-gray-300 hover:text-gray-900 dark:hover:text-white hover:bg-gray-100 dark:hover:bg-gray-800/50">
-                  AI Hub
-                  <ChevronDown className="ml-1 h-3.5 w-3.5 opacity-50" />
-                </Button>
-              </DropdownMenuTrigger>
-              <DropdownMenuContent align="start" className="w-72">
-                <div className="p-1 space-y-1">
-                  <DropdownMenuItem asChild>
-                    <Link to="/ai/ai-text-detector" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent font-medium bg-blue-50 dark:bg-blue-950/20">
-                      <span className="text-lg">🔍</span>
-                      <span className="text-sm">AI Text Detector</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild>
-                    <Link to="/ai/relationships" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">💕</span>
-                      <span className="text-sm">Relationships</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/ai/wellness" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🌱</span>
-                      <span className="text-sm">Wellness</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/ai/parenting" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">👶</span>
-                      <span className="text-sm">Parenting</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuItem asChild>
-                    <Link to="/ai/shopping" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent">
-                      <span className="text-lg">🛒</span>
-                      <span className="text-sm">Shopping</span>
-                    </Link>
-                  </DropdownMenuItem>
-                  <DropdownMenuSeparator />
-                  <DropdownMenuItem asChild>
-                    <Link to="/ai/social" className="flex items-center gap-3 px-3 py-2.5 rounded-md hover:bg-accent font-medium">
-                      <span className="text-lg">#️⃣</span>
-                      <span className="text-sm">Social Media Tools</span>
-                    </Link>
-                  </DropdownMenuItem>
-                </div>
-              </DropdownMenuContent>
-            </DropdownMenu>
           </nav>
 
           <div className="flex items-center gap-2">
